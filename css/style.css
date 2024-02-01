@@ -1,46 +1,114 @@
-html {
-    height: 100%;
-}
-
-body {
-    font-family: 'Afacad', sans-serif;
+html, body {
     margin: 0;
     padding: 0;
-    color: white;
-    background: linear-gradient(45deg, #000, #333);
     height: 100%;
+    color: white;
+    background: #000000; /* solid black background */
+    font-family: 'Afacad', sans-serif;
+}
+
+.full-page {
+    min-height: 100vh; /* full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    padding: 20px 0;
+    padding-top: 2%; /* Add top padding to header */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start of the flex container */
 }
 
-h1 {
-    font-size: 3em; 
+.logo {
+    width: 100px; /* Slightly larger logo */
+    height: auto;
+    padding-left: 5vw; /* Add left padding to logo */
 }
 
-h2 {
-    font-size: 1.5em; 
+nav {
+    padding-right: 7vw; /* Add right padding to navigation */
+    padding-top: 2%; /* Add top padding to navigation */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Ensure no default margin */
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 40px; 
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    padding: 10px; /* Increase padding around links */
+    font-size: 1.6em; /* Increase font size */
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.landing {
+    padding-top: 40vh; /* positioning the title 30% from the top */
+    padding-left: 7vw; /* adding some horizontal space */
+    text-align: left; /* aligns the text to the left */
+}
+
+.landing h1 {
+    font-size: 4em; /* slightly smaller than before for balance */
+    margin-bottom: 0.2em; /* space between title and intro */
+}
+
+.intro {
+    max-width: 600px;
+    margin-bottom: 1em; /* add space below intro */
+    font-size: 1.1em; /* slightly smaller font size */
+    line-height: 1.6; /* improve readability */
+}
+
+/* Projects Section */
+#projects {
+    padding: 4em 1em; /* add padding */
+    background: #1c1c1c; /* slightly lighter than the body for contrast */
+}
+
+/* Footer */
+footer {
+    padding: 2em 1em;
+    background: #0f0f0f; /* dark background for footer */
+    text-align: center; /* center align text */
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
     text-decoration: underline;
 }
 
-/* Additional responsive design adjustments can be added later */
+@media (max-width: 768px) {
+    /* Responsive styles here */
+    .landing h1 {
+        font-size: 2.5em; /* smaller font size for mobile */
+    }
+    
+    nav ul li {
+        display: block; /* stack nav items for smaller screens */
+        margin: 10px 0; /* add vertical space between items */
+    }
+}
