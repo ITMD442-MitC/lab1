@@ -80,9 +80,77 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 /* Projects Section */
+.full-height {
+    min-height: 100vh; /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #projects {
-    padding: 4em 1em; /* add padding */
-    background: #1c1c1c; /* slightly lighter than the body for contrast */
+    padding-top: 10em; /* Increased top padding to push down the title */
+    background:  #000000;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.9em; /* Increased font size for h2 */
+    margin-bottom: 2em; /* Provide space between title and project cards */
+    position: relative; /* Add relative positioning to h2 */
+    z-index: 2; /* Ensure it's above the negative margin of project-list */
+
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: flex-start; /* Aligns projects to the top */
+    margin-top: -1em; /* Adjust this value to pull content up as needed */
+    position: relative;
+    z-index: 1; /* Ensure it doesn't go over h2 */
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch the children to fill the height */
+    width: 100%;
+    margin-bottom: 4em; /* Increase spacing between projects */
+}
+
+.project-content {
+    flex-basis: 40%; /* Allocate width */
+    margin-right: 5%; /* Space between content and image placeholder */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    text-align: left;
+}
+
+.project-image-placeholder {
+    flex-basis: 50%; /* Allocate width */
+    height: 200px; /* Increased height */
+    background: white;
+    border-radius: 15px; /* Rounded corners for the image placeholder */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em; /* Add some padding inside the placeholder */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add some shadow for depth */
+    color: black; /* Set text color to black */
+}
+
+.project h3 {
+    font-size: 2.5em; /* Adjust the font size as needed */
+}
+
+.project p {
+    font-size: 1em;
 }
 
 /* Footer */
