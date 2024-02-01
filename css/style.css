@@ -14,7 +14,7 @@ html, body {
 }
 
 header {
-    padding-top: 2%; /* Add top padding to header */
+    padding-top: 2%; /* Added top padding to header */
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,7 +26,7 @@ header {
 }
 
 .logo {
-    width: 100px; /* Slightly larger logo */
+    width: 100px; 
     height: auto;
     padding-left: 5vw; /* Add left padding to logo */
 }
@@ -76,7 +76,7 @@ nav ul li a:hover, nav ul li a:focus {
     max-width: 600px;
     margin-bottom: 1em; /* add space below intro */
     font-size: 1.1em; /* slightly smaller font size */
-    line-height: 1.6; /* improve readability */
+    line-height: 1.6;
 }
 
 /* Projects Section */
@@ -140,7 +140,7 @@ nav ul li a:hover, nav ul li a:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1em; /* Add some padding inside the placeholder */
+    padding: 1em; /* Added some padding inside the placeholder */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add some shadow for depth */
     color: black; /* Set text color to black */
 }
@@ -155,28 +155,72 @@ nav ul li a:hover, nav ul li a:focus {
 
 /* Footer */
 footer {
-    padding: 2em 1em;
-    background: #0f0f0f; /* dark background for footer */
-    text-align: center; /* center align text */
+    padding: 4em 1em; /* Increased padding for larger space */
+    background: #0f0f0f; /* Dark background for footer */
+    text-align: center; /* Center align text */
+    display: flex; /* Enable flex container */
+    justify-content: center; /* Horizontally align items */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+footer p {
+    margin: 0 1em; /* Add space around each paragraph */
+    font-size: 1.2em; /* Increased font size */
 }
 
 footer a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 1.2em; /* Increased font size for links */
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    /* Responsive styles here */
-    .landing h1 {
-        font-size: 2.5em; /* smaller font size for mobile */
+@keyframes move {
+    to {
+      transform: translate3d(-50vw, -50vh, 0);
     }
-    
-    nav ul li {
-        display: block; /* stack nav items for smaller screens */
-        margin: 10px 0; /* add vertical space between items */
+  }
+  
+@keyframes flash {
+    0%, 30%, 100% {
+      opacity: 0;
     }
-}
+    5% {
+      opacity: 1;
+    }
+  }
+  
+.firefly {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 10px 2px yellow;
+    animation: move 20s infinite alternate, flash 5s infinite;
+  }
+  
+  /* Individual animations for each firefly */
+  .firefly:nth-child(1) { animation-duration: 20s, 3s; }
+  .firefly:nth-child(2) { animation-duration: 18s, 4s; }
+  .firefly:nth-child(3) { animation-duration: 16s, 5s; }
+  .firefly:nth-child(4) { animation-duration: 14s, 6s; }
+  .firefly:nth-child(5) { animation-duration: 12s, 7s; }
+  .firefly:nth-child(6) { animation-duration: 10s, 8s; }
+
+  .firefly:nth-child(7) { animation-duration: 8s, 9s; }
+  .firefly:nth-child(8) { animation-duration: 6s, 10s; }
+  .firefly:nth-child(9) { animation-duration: 4s, 11s; }
+  .firefly:nth-child(10) { animation-duration: 2s, 12s; }
+  .firefly:nth-child(11) { animation-duration: 0s, 13s; }
+  .firefly:nth-child(12) { animation-duration: 10s, 8s; }
+  
+  
+  
+  
